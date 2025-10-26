@@ -2,16 +2,18 @@ import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
-const Mainlayout = () => {
+import React from 'react'
+
+const TheMainLayout = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <NavBar />
-      <div className="flex-grow">
+      <main className="flex-grow">
         <Outlet />
-      </div>
+      </main>
       <Footer />
     </div>
   )
 }
 
-export default Mainlayout
+export default TheMainLayout

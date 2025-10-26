@@ -12,11 +12,11 @@ import Dashboard from "./pages/Dashboard";
 import Tickets from "./pages/Tickets";
 import NotFound from "./pages/NotFound";
 import { TicketProvider } from "./components/TicketContext";
-import Mainlayout from './layouts/MainLayout'
+import TheMainLayout from "./layouts/TheMainLayout";
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Mainlayout />}>
+      <Route path="/" element={<TheMainLayout />}>
         <Route index element={<LandingPage />} />
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/signup" element={<Signup />} />
