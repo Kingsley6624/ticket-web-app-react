@@ -5,13 +5,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import ProtectionRoute from "./routes/ProtectionRoute";
-import MainLayout from "./layouts/Mainlayout";
+import MainLayout from "./layouts/MainLayout";
 import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Tickets from "./pages/Tickets";
 import NotFound from "./pages/NotFound";
+import { TicketProvider } from "./components/TicketContext";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -41,7 +42,11 @@ const App = () => {
     )
   );
 
-  return <RouterProvider router={router} />;
+  return (
+    <TicketProvider>
+      <RouterProvider router={router} />
+    </TicketProvider>
+  );
 };
 
 export default App;

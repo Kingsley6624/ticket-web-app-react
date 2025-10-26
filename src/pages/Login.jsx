@@ -38,6 +38,7 @@ const Login = () => {
       setErrors({ form: "No account found. Please sign up first." });
     } else if (email === storedUser.email && password === storedUser.password) {
       localStorage.setItem("ticketapp_session", "mock_token");
+      window.dispatchEvent(new Event("sessionChange"));
       navigate("/dashboard");
     } else {
       setErrors({ form: "Invalid email or password" });

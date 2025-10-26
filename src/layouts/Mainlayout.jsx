@@ -3,14 +3,16 @@ import NavBar from "../components/NavBar";
 import Footer from '../components/Footer'
 
 
-const Mainlayout = () => {
+const MainLayout = () => {
   return (
-    <>
-    <NavBar />
-    <Outlet />
-    <Footer/>
-    </>
-  )
-}
+    <div className="min-h-screen flex flex-col">
+      <NavBar />
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
-export default Mainlayout
+export default MainLayout
