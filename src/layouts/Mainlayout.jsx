@@ -1,9 +1,8 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 
-
-const MainLayout = () => {
+const Mainlayout = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <NavBar />
@@ -12,7 +11,7 @@ const MainLayout = () => {
       </main>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default MainLayout
+export default Mainlayout
